@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\User;
+use App\Models\Category;
+use App\Models\Post;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +16,43 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        // \App\Models\User::factory(10)->create();      
+     User::create([
+        'name'=>'Soeharto',
+        'email'=>'soeharto@gmail.com',
+        'password'=>bcrypt('12345')
+     ]);
+     Category::create([
+        'name'=>'Web Programming',
+        'slug'=>'web-programming'
+     ]);
+     Category::create([
+        'name'=>'Personal',
+        'slug'=>'personal'
+     ]);
+     Post::create([
+        'title'=>'Judul Pertama',
+        'slug'=>'judul-pertama',
+        'excerpt'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus,',
+        'body'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus, earum vel, explicabo accusamus error mollitia! Mollitia aperiam, veritatis ut ipsum facilis dolorum magnam modi, itaque sed error ab eaque culpa voluptatibus nobis molestiae dolore natus id maxime minus numquam quod iste? Dolore mollitia cum quae eveniet magnam doloremque quos ab, modi hic et molestias, est ex nulla iure dolores omnis earum sit iusto. Architecto dolorum fugiat asperiores explicabo? Ex ut optio aliquid corrupti nemo voluptates cupiditate quo ab qui tempore. Adipisci odit sunt velit sit fugit enim deleniti suscipit! Incidunt deleniti suscipit vero',
+        'category_id'=>1,
+        'user_id'=>1
+     ]);
+     Post::create([
+        'title'=>'Judul Kedua',
+        'slug'=>'judul-ke-dua',
+        'excerpt'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus,',
+        'body'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus, earum vel, explicabo accusamus error mollitia! Mollitia aperiam, veritatis ut ipsum facilis dolorum magnam modi, itaque sed error ab eaque culpa voluptatibus nobis molestiae dolore natus id maxime minus numquam quod iste? Dolore mollitia cum quae eveniet magnam doloremque quos ab, modi hic et molestias, est ex nulla iure dolores omnis earum sit iusto. Architecto dolorum fugiat asperiores explicabo? Ex ut optio aliquid corrupti nemo voluptates cupiditate quo ab qui tempore. Adipisci odit sunt velit sit fugit enim deleniti suscipit! Incidunt deleniti suscipit vero',
+        'category_id'=>1,
+        'user_id'=>1
+     ]);
+     Post::create([
+        'title'=>'Judul Ketiga',
+        'slug'=>'judul-ke-tiga',
+        'excerpt'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus,',
+        'body'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus, earum vel, explicabo accusamus error mollitia! Mollitia aperiam, veritatis ut ipsum facilis dolorum magnam modi, itaque sed error ab eaque culpa voluptatibus nobis molestiae dolore natus id maxime minus numquam quod iste? Dolore mollitia cum quae eveniet magnam doloremque quos ab, modi hic et molestias, est ex nulla iure dolores omnis earum sit iusto. Architecto dolorum fugiat asperiores explicabo? Ex ut optio aliquid corrupti nemo voluptates cupiditate quo ab qui tempore. Adipisci odit sunt velit sit fugit enim deleniti suscipit! Incidunt deleniti suscipit vero',
+        'category_id'=>2,
+        'user_id'=>1
+     ]);
     }
 }
