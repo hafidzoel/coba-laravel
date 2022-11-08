@@ -16,17 +16,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();      
-     User::create([
-        'name'=>'Khafidzul',
-        'email'=>'khafidzul@gmail.com',
-        'password'=>bcrypt('12345')
-     ]);
-     User::create([
-        'name'=>'Hafedzoel',
-        'email'=>'hafidzoel@gmail.com',
-        'password'=>bcrypt('12345')
-     ]);
+
+   //   User::create([
+   //      'name'=>'Khafidzul',
+   //      'email'=>'khafidzul@gmail.com',
+   //      'password'=>bcrypt('12345')
+   //   ]);
+   //   User::create([
+   //      'name'=>'Hafedzoel',
+   //      'email'=>'hafidzoel@gmail.com',
+   //      'password'=>bcrypt('12345')
+   //   ]);
+
+
+   User::factory(3)->create();      
+
      Category::create([
         'name'=>'Web Programming',
         'slug'=>'web-programming'
@@ -35,37 +39,41 @@ class DatabaseSeeder extends Seeder
         'name'=>'Personal',
         'slug'=>'personal'
      ]);
-     Post::create([
-        'title'=>'Judul Pertama',
-        'slug'=>'judul-pertama',
-        'excerpt'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus,',
-        'body'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus, earum vel, explicabo accusamus error mollitia! Mollitia aperiam, veritatis ut ipsum facilis dolorum magnam modi, itaque sed error ab eaque culpa voluptatibus nobis molestiae dolore natus id maxime minus numquam quod iste? Dolore mollitia cum quae eveniet magnam doloremque quos ab, modi hic et molestias, est ex nulla iure dolores omnis earum sit iusto. Architecto dolorum fugiat asperiores explicabo? Ex ut optio aliquid corrupti nemo voluptates cupiditate quo ab qui tempore. Adipisci odit sunt velit sit fugit enim deleniti suscipit! Incidunt deleniti suscipit vero',
-        'category_id'=>1,
-        'user_id'=>1
-     ]);
-     Post::create([
-        'title'=>'Judul Kedua',
-        'slug'=>'judul-ke-dua',
-        'excerpt'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus,',
-        'body'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus, earum vel, explicabo accusamus error mollitia! Mollitia aperiam, veritatis ut ipsum facilis dolorum magnam modi, itaque sed error ab eaque culpa voluptatibus nobis molestiae dolore natus id maxime minus numquam quod iste? Dolore mollitia cum quae eveniet magnam doloremque quos ab, modi hic et molestias, est ex nulla iure dolores omnis earum sit iusto. Architecto dolorum fugiat asperiores explicabo? Ex ut optio aliquid corrupti nemo voluptates cupiditate quo ab qui tempore. Adipisci odit sunt velit sit fugit enim deleniti suscipit! Incidunt deleniti suscipit vero',
-        'category_id'=>1,
-        'user_id'=>1
-     ]);
-     Post::create([
-        'title'=>'Judul Ketiga',
-        'slug'=>'judul-ke-tiga',
-        'excerpt'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus,',
-        'body'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus, earum vel, explicabo accusamus error mollitia! Mollitia aperiam, veritatis ut ipsum facilis dolorum magnam modi, itaque sed error ab eaque culpa voluptatibus nobis molestiae dolore natus id maxime minus numquam quod iste? Dolore mollitia cum quae eveniet magnam doloremque quos ab, modi hic et molestias, est ex nulla iure dolores omnis earum sit iusto. Architecto dolorum fugiat asperiores explicabo? Ex ut optio aliquid corrupti nemo voluptates cupiditate quo ab qui tempore. Adipisci odit sunt velit sit fugit enim deleniti suscipit! Incidunt deleniti suscipit vero',
-        'category_id'=>2,
-        'user_id'=>1
-     ]);
-     Post::create([
-        'title'=>'Judul Keempat',
-        'slug'=>'judul-ke-empat',
-        'excerpt'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus,',
-        'body'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus, earum vel, explicabo accusamus error mollitia! Mollitia aperiam, veritatis ut ipsum facilis dolorum magnam modi, itaque sed error ab eaque culpa voluptatibus nobis molestiae dolore natus id maxime minus numquam quod iste? Dolore mollitia cum quae eveniet magnam doloremque quos ab, modi hic et molestias, est ex nulla iure dolores omnis earum sit iusto. Architecto dolorum fugiat asperiores explicabo? Ex ut optio aliquid corrupti nemo voluptates cupiditate quo ab qui tempore. Adipisci odit sunt velit sit fugit enim deleniti suscipit! Incidunt deleniti suscipit vero',
-        'category_id'=>2,
-        'user_id'=>2
-     ]);
-    }
-}
+     Post::factory(20)->create();
+
+
+
+//      Post::create([
+//         'title'=>'Judul Pertama',
+//         'slug'=>'judul-pertama',
+//         'excerpt'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus,',
+//         'body'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus, earum vel, explicabo accusamus error mollitia! Mollitia aperiam, veritatis ut ipsum facilis dolorum magnam modi, itaque sed error ab eaque culpa voluptatibus nobis molestiae dolore natus id maxime minus numquam quod iste? Dolore mollitia cum quae eveniet magnam doloremque quos ab, modi hic et molestias, est ex nulla iure dolores omnis earum sit iusto. Architecto dolorum fugiat asperiores explicabo? Ex ut optio aliquid corrupti nemo voluptates cupiditate quo ab qui tempore. Adipisci odit sunt velit sit fugit enim deleniti suscipit! Incidunt deleniti suscipit vero',
+//         'category_id'=>1,
+//         'user_id'=>1
+//      ]);
+//      Post::create([
+//         'title'=>'Judul Kedua',
+//         'slug'=>'judul-ke-dua',
+//         'excerpt'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus,',
+//         'body'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus, earum vel, explicabo accusamus error mollitia! Mollitia aperiam, veritatis ut ipsum facilis dolorum magnam modi, itaque sed error ab eaque culpa voluptatibus nobis molestiae dolore natus id maxime minus numquam quod iste? Dolore mollitia cum quae eveniet magnam doloremque quos ab, modi hic et molestias, est ex nulla iure dolores omnis earum sit iusto. Architecto dolorum fugiat asperiores explicabo? Ex ut optio aliquid corrupti nemo voluptates cupiditate quo ab qui tempore. Adipisci odit sunt velit sit fugit enim deleniti suscipit! Incidunt deleniti suscipit vero',
+//         'category_id'=>1,
+//         'user_id'=>1
+//      ]);
+//      Post::create([
+//         'title'=>'Judul Ketiga',
+//         'slug'=>'judul-ke-tiga',
+//         'excerpt'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus,',
+//         'body'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus, earum vel, explicabo accusamus error mollitia! Mollitia aperiam, veritatis ut ipsum facilis dolorum magnam modi, itaque sed error ab eaque culpa voluptatibus nobis molestiae dolore natus id maxime minus numquam quod iste? Dolore mollitia cum quae eveniet magnam doloremque quos ab, modi hic et molestias, est ex nulla iure dolores omnis earum sit iusto. Architecto dolorum fugiat asperiores explicabo? Ex ut optio aliquid corrupti nemo voluptates cupiditate quo ab qui tempore. Adipisci odit sunt velit sit fugit enim deleniti suscipit! Incidunt deleniti suscipit vero',
+//         'category_id'=>2,
+//         'user_id'=>1
+//      ]);
+//      Post::create([
+//         'title'=>'Judul Keempat',
+//         'slug'=>'judul-ke-empat',
+//         'excerpt'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus,',
+//         'body'=>'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quia illo odit numquam, neque ipsa voluptatibus, earum vel, explicabo accusamus error mollitia! Mollitia aperiam, veritatis ut ipsum facilis dolorum magnam modi, itaque sed error ab eaque culpa voluptatibus nobis molestiae dolore natus id maxime minus numquam quod iste? Dolore mollitia cum quae eveniet magnam doloremque quos ab, modi hic et molestias, est ex nulla iure dolores omnis earum sit iusto. Architecto dolorum fugiat asperiores explicabo? Ex ut optio aliquid corrupti nemo voluptates cupiditate quo ab qui tempore. Adipisci odit sunt velit sit fugit enim deleniti suscipit! Incidunt deleniti suscipit vero',
+//         'category_id'=>2,
+//         'user_id'=>2
+//      ]);
+   }
+ }
